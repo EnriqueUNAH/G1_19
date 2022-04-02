@@ -31,11 +31,12 @@ function CargarSocios(){
                 '<td>'+ MiItems[i].TELEFONO+'</td>'+
                 '<td>'+
                 '<button class="btn btn-info" onclick="CargarSocio('+ MiItems[i].ID +')">Editar</button>'+
-                '<button class="btn btn-warning" onclick="EliminarSocio('+ MiItems[i].ID +')">Eliminar</button>'+
+                '<button class="btn btn-warning" onclick="EliminarSocio('+ MiItems[i].ID+')">Eliminar</button>'+
                 '</td>'+
-            '</tr>';
-            $('.Sociosnegocio').html(Valores);
+                '</tr>';
+                $('.Sociosnegocio').html(Valores);
             }
+           
         }
     });
 }
@@ -74,13 +75,13 @@ function CargarSocio(idsocio){
         ID: idsocio
     };
     var datossociojson = JSON.stringify(datossocio);
-    alert(datossociojson);
+  
     $.ajax({
         url: UrlGetSocio,
         type: 'POST',
         data: datossociojson,
         datatype: 'JSON',
-        contentType: 'application/json',
+        contentType: 'application/json', 
         success: function(reponse){
             var MiItems = reponse;
             $('#NOMBRE').val(MiItems[0].NOMBRE);
@@ -92,8 +93,12 @@ function CargarSocio(idsocio){
             $('#FECHA_CREADO').val(MiItems[0].FECHA_CREADO);
             $('#ESTADO').val(MiItems[0].ESTADO);
             $('#TELEFONO').val(MiItems[0].TELEFONO);
-            
+            var btnactualizar= '<input type="submit" id="btnactualizar" onclick="ActualizarSocio('+MiItems[0].ID+')"'+
+            'value="Actualizar Socio" class="btn btn-primary"></input>';
+            $('.btnsocio').html(btnactualizar);
+           
         }
+       
     });
 }
 
@@ -115,7 +120,7 @@ function ActualizarSocio(idsocio){
         url: UrlPutSocio,
         type: 'PUT',
         data: datossociojson,
-        datatype: 'JSON',
+        datatype: 'JSON', 
         contenttype: 'application/json',
         success: function (reponse){
             console.log(reponse);
@@ -129,8 +134,9 @@ function EliminarSocio(idsocio){
     var datossocio = {
         id:idsocio
     };
+    
     var datossociojson = JSON.stringify(datossocio);
-  
+   // alert(datossociojson);
     $.ajax({
         url: UrlDeleteSocio,
         type: 'DELETE',
@@ -140,8 +146,13 @@ function EliminarSocio(idsocio){
         success: function (reponse) {
             console.log(reponse);
 
-        
+       
         }
+       //error:function(textstatus ,errorThrom){
+         // alert('Error ' + textstatus, errorThrom);
+         
+        //}
     });
     alert("Socio Eliminado");
+    
 }

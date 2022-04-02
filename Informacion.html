@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socios</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
+    crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/JS/Socio.js"></script>
+    <link rel="shortcut icon" href="#">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <b>
+          <a class="navbar-brand" >G1_19</a>
+          </b>
+          <img src="https://www.unah.edu.hn/themes/portalunah/assets/images/logo-unah.png" alt="" width="100" height="55">
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/home.html">Home</a>
+              </li>
+             
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Consumo API'S Rest
+                </a>
+               
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="/Forms/Socio.html">Socios</a></li>
+                  <li><a class="dropdown-item" href="/Forms/pedidos.html">Pedidos</a></li>
+                  <li><a class="dropdown-item" href="/Forms/facturas.html">Facturas</a></li>
+                  <li><a class="dropdown-item" href="#">Materiales</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      
+      <table class="table table-bordered">
+        <thead class="thead-dark">
+            <br>
+            <h3>
+                INFORMACIÓN DEL GRUPO
+            </h3>
+            <br>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">NOMBRE</th>
+            <th scope="col">FORMULARIO DESARROLLADO</th>
+            <th scope="col">EXPLICACIÓN</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Anthony Javier Duarte Velásquez</td>
+            <td>SOCIOS</td>
+            <td>Este formulario se utiliza para poder llevar un buen control de todos los datos de los Socios de Negocios, 
+              al ingresar al formulario se puede observar la carga de cada uno de ellos y diferentes operaciones que podemos 
+              realizar como: insertar nuevos registros que se irán almacenando en una base de datos en la nube, también podemos 
+              editar esos registros por si se escribió algún dato erróneo, como también poder eliminar algun socio de manera permanente. 
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Héctor Enrique Bustillo Nolasco </td>
+            <td>PEDIDOS</td>
+            
+            <td>El formulario de pedidos consiste en 4 procedimientos básicos, el primer procedimiento es insertar el registro 
+              de pedidos que nos hicieron, luego tenemos el siguiente procedimiento que es actualizar, este procedimiento nos 
+              permite editar información de la tabla de un solo registro  útilizando también el procedimiento de traer un solo 
+              registro, el siguiente y último procedimiento es el de eliminar un registro de la tabla. Este formulario sirve en 
+              base a nuestras APIs Rest ya previamente desarrolladas</td>
+           
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td></td>
+            <td>FACTURA</td>
+            <td>PRUEBA</td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td></td>
+            <td>MATERIALES</td>
+            <td>PRUEBA</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
+      crossorigin="anonymous"></script>
