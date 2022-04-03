@@ -1,5 +1,5 @@
 body{
-    background-image: url(http://photos.demandstudios.com/getty/article/142/176/86541478.jpg);
+    background-image: url(https://1757140519.rsc.cdn77.org/blog/wp-content/uploads/sites/4/2019/01/4-min.jpg);
     background-repeat: (no-repeat);
     background-size: cover;
 }
@@ -32,5 +32,8 @@ h1::after{
     justify-content: center;
     align-items: center;
     text-shadow: 1px 1px 1px;
-   transform: translate(0%, 70%);
+   transform: translate(-4%, 70%);
+}
+.table{
+    color: white;
 }
